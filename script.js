@@ -3,7 +3,7 @@ var navbar = document.getElementById("navbar");
 var sticky = navbar.offsetTop;
 
 function myFunction() {
-    if (window.pageYOffset >= sticky) {
+    if (window.pageYOffset > sticky) {
     navbar.classList.add("sticky")
     $('#navbar img').attr('src', './images/WhitePrint.svg')
     navbar.classList.remove("container")
@@ -30,7 +30,3 @@ $(document).ready(() => {
         prevArrow: '<i class="fas fa-angle-left"></i>' 
     });
     });
-
-
-
-
