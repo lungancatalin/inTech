@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=DM+Serif+Display|Karla:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 * {
     box-sizing: border-box;
@@ -7,17 +7,25 @@
 body {
     color: var(--dark-violet);
     margin: 0;
-    font-family: 'Karla', sans-serif;
+    padding: 0;
+    font-family: 'IBM Plex Sans', sans-serif;
     background-image: linear-gradient(127deg,#ff1818,rgba(255,255,255,0) 70%),linear-gradient(240deg,rgba(0,64,64,0.8),rgba(0,255,128,0) 80%),linear-gradient(350deg,rgba(32,0,255,0.9),rgba(0,0,255,0) 80%);
+}
+
+#navbar {
+    display: flex;
+    height: 106px;
 }
 
 h1,
 h2,
 h3 {
-    font-family: 'DM Serif Display', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
 }
 h3 {
     font-size: 1.3rem;
+    font-weight: 600;
 }
 p {
     font-style: italic;
@@ -25,7 +33,7 @@ p {
 
 h1,
 h2 {
-    font-size: 2.5em;
+    font-size: 3em;
     color: white;
     letter-spacing: 2px;
     line-height: 1;
@@ -34,10 +42,12 @@ h2 {
 
 h1.about {
     padding-top: 150px;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    background-image: linear-gradient(127deg,#ff1818,rgba(255,255,255,0) 70%),linear-gradient(240deg,rgba(0,64,64,0.8),rgba(0,255,128,0) 80%),linear-gradient(350deg,rgba(32,0,255,0.9),rgba(0,0,255,0) 80%);
+    color: black;
+    font-weight: 500;
+    font-size: 45px;
+}
+.simbol {
+    vertical-align: bottom;
 }
 
 .ab-section {
@@ -64,6 +74,9 @@ span.job {
     font-style: normal;
     font-weight: lighter;
 }
+.text-right {
+    padding-bottom: 100px;
+}
 
 .slick-arrow {
     position: absolute;
@@ -84,7 +97,8 @@ span.job {
 .sticky img {
     width: 180px;
     height: 48px;
-    margin: 10px auto;
+    margin: 25px;
+    margin-left: 17%;
 }
 
 .sticky {
@@ -92,15 +106,26 @@ span.job {
     top: 0;
     width: 100%;
     margin-top: 0;
-    padding-left: 17%;
     z-index: 9;
     background-image: linear-gradient(127deg,#ff1818,rgba(255,255,255,0) 80%),linear-gradient(240deg,rgba(0,64,64,0.8),rgba(0,255,128,0) 90%),linear-gradient(350deg,rgba(32,0,255,0.9),rgba(0,0,255,0) 90%);
 }
+.slick-arrow:hover {
+    transform: scale(1.2);
+}
+
+.footer-copyright {
+    color: white;
+    font-family: Arial, sans-serif; 
+}
 
 @media screen and (max-width:767px) {
-    header .container {
-        text-align: center;
+    .sticky img {
+        margin-left: 0;
     }
+    #navbar {
+        justify-content: center;
+    }
+
     .career, .about, #slideshow {
         text-align: center;
         margin: 40px;
@@ -120,7 +145,6 @@ span.job {
     }
     .sticky {
         text-align: center;
-        
     }
 }
 
@@ -145,4 +169,4 @@ span.job {
 
 
 
-
+   
